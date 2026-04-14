@@ -44,3 +44,71 @@ npm run dev
 - `GET /projects/:id` returns the project plus task IDs.
 - `GET /task/:id` returns the detailed task fields, and the task ID is supplied by the list route.
 - Status and priority enum values are rendered as strings. Update the option lists in `src/lib/constants.ts` if your backend uses different enum names.
+
+## 📖 Overview
+
+Frontend for TaskFlow — a task and project management system.
+
+Provides:
+- User login & signup
+- Project dashboard
+- Task creation & tracking
+- Status management (Todo / In Progress / Done)
+
+---
+
+## 🧱 Tech Stack
+
+- React (Vite)
+- TypeScript
+- Axios (API calls)
+- React Router
+- Material UI (MUI)
+
+---
+
+## 🏗️ Architecture
+
+Pages → Components → API Layer → Backend
+
+
+### Structure
+
+- **Pages**: Full screens (Login, Register, Dashboard)
+- **Components**: Reusable UI components
+- **API Layer**: Centralized backend communication
+- **Routing**: React Router DOM
+
+---
+
+## 🔌 API Handling
+
+All API calls are routed via Vite proxy:
+
+```ts
+/api/v1 → http://localhost:8080/api/v1
+
+This avoids CORS issues during development.
+
+⚙️ Environment Setup
+
+No hardcoded backend URLs are used.
+
+All requests are relative:
+
+axios.get("/api/v1/tasks");
+
+🚀 Running Frontend
+npm install
+npm run dev
+
+⚖️ Tradeoffs
+No Redux → avoided complexity, used local state
+No UI framework like Next.js → kept SPA simple
+No SSR → not needed for dashboard-style app
+
+📌 Future Improvements
+Add Redux Toolkit for global state
+Add role-based UI rendering
+Improve UI/UX with advanced dashboard charts
+Add real-time updates (WebSockets)
