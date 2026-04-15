@@ -138,7 +138,7 @@ Reason: simplicity and faster development
 -> Reason: focus on core CRUD + auth flow
 
 🚀 How to Run
-git clone <repo-url>
+git clone https://github.com/shashank-varshney21/taskflow-shashank_varshney.git
 cd taskflow
 cp .env.example .env
 docker compose up
