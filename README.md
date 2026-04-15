@@ -142,7 +142,7 @@ git clone <repo-url>
 cd taskflow
 cp .env.example .env
 docker compose up
-Frontend → http://localhost:5173
+Frontend → http://localhost:3000
 Backend → http://localhost:8080
 
 👨‍💻 Author
